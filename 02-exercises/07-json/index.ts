@@ -3,11 +3,11 @@
 // objects.
 
 const toJson = (item: unknown): string => {
-    return JSON.stringify(item)
+    throw new Error("Not implemented")
 }
 
 const fromJson = (json: string): unknown => {
-    return JSON.parse(json)
+    throw new Error("Not implemented")
 }
 
 interface Person {
