@@ -1,35 +1,23 @@
-// In this exercise we implement the functions "second" and
-// "third" so that the following sequence of strings, in
-// this order, is printed to console.
+// In this exercise we implement the function "add" to add
+// the values returned from two promises.
 //
-// first
-// second
-// third
-//
-// Please mind that no code other than the bodies of
-// "second" and "third" may be altered.
+// Please mind that no code other than the body of "add"
+// may be altered.
 
 const sleep = async (ms: number) => {
     return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
-const first = async (): Promise<void> => {
+const simulateWorkAndReturn = async (value: number): Promise<number> => {
     await sleep(3000)
 
-    console.log("first")
+    return value
 }
 
 /**
- * Implement this function to write "second" to the console.
+ * Implement this function to add the values returned from the two promises.
  */
-const second = async (): Promise<void> => {
-    throw new Error("Not implemented")
-}
-
-/**
- * Implement this function to write "third" to the console.
- */
-const third = async (): Promise<void> => {
+const add = async (x: Promise<number>, y: Promise<number>): Promise<number> => {
     throw new Error("Not implemented")
 }
 
@@ -37,7 +25,12 @@ const third = async (): Promise<void> => {
 // since Node.js doesn't allow us to await on the global
 // scope
 ;(async () => {
-    await Promise.all([first(), second(), third()]) // first, second, third
+    const x = simulateWorkAndReturn(3)
+    const y = simulateWorkAndReturn(4)
+    
+    const result = await add(x, y)
+
+    console.log(result) // 7
 })()
 
 export {}
