@@ -21,7 +21,7 @@ const add = async (x: Promise<number>, y: Promise<number>): Promise<number> => {
     throw new Error("Not implemented")
 }
 
-// Wee need to wrap the code in self invoking function
+// We need to wrap the code in self invoking function
 // since Node.js doesn't allow us to await on the global
 // scope
 ;(async () => {

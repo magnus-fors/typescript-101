@@ -6,7 +6,7 @@ const now = () => {
     return new Date().toTimeString()
 }
 
-// Wee need to wrap the code in self invoking function
+// We need to wrap the code in self invoking function
 // since Node.js doesn't allow us to await on the global
 // scope
 ;(async () => {
