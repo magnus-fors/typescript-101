@@ -10,4 +10,5 @@ const person: any = {
 
 console.log(person.address) // undefined
 
+
 export {}

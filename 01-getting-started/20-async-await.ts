@@ -11,7 +11,10 @@ const now = () => {
 // scope
 ;(async () => {
     console.log(now(), "before")
-    await sleep(5000)
+    let a = sleep(5000)
+    let b = sleep(5000)
+    let c = sleep(5000)
+    await Promise.all([a, b, c])
     console.log(now(), "after")
 })()
 

@@ -26,4 +26,15 @@ const chat = (sender: string, ...words: string[]) => {
 
 chat("John", "Hello", "world!") // John: Hello world!
 
+
+let log = (msg: string) => {
+    console.log(msg)
+}
+
+log = (msg: string) => {
+    console.log("INFO: " + msg)
+}
+
+log("Kalle was here!")
+
 export {}

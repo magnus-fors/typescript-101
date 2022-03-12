@@ -5,4 +5,9 @@ for (let x in fruits) {
     console.log(fruits[x]) // apple, orange, pear
 }
 
+let person = { name: "Kalle", age: 34 }
+for (let prop in person) {
+    console.log(prop)
+}
+
 export {}

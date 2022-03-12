@@ -10,5 +10,5 @@ const add = (...values: number[]): number => {
 
 // Because of rest parameters we can pass the values
 // without having to wrap them into an array
-const sum = add(1, 3, 5)
-console.log(sum) // 9
+const sum = add(1, 3, 5, 7)
+console.log(sum) // 16

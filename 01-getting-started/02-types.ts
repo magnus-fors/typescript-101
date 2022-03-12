@@ -7,7 +7,10 @@ let country = "Sweden"
 // String
 let firstName = "John"
 let surname = "Doe"
-let name = `${firstName} ${surname}`
+let title = "Dr."
+let name = `${title} ${firstName} ${surname}`
+
+console.log(name)
 
 // Number
 let age = 42
